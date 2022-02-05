@@ -1,0 +1,11 @@
+{
+  "name": "p3_joachim_steiner",
+  "version": "1.0.0",
+  "description": "OhMYFood",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "Dahis",
+  "license": "ISC"
+}
