@@ -1,0 +1,62 @@
+.menu-main {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-image: url(/public/img/la-note-enchantee.jpg);
+}
+
+.container-menu {
+    display: flex;
+    background-color: $colour-container;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    flex-direction: column;
+    top: -30px;
+    padding: 1rem;
+    border-radius: 35px 35px 0 0;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    &__logo {
+        font-size: 1.3rem;
+    }
+}
+
+
+.container-menu__title-secondary {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem;
+
+    &__underline {
+        border-bottom: 3px solid $colour-tertiary;
+        width: 10%;
+        height: 25px;
+    }
+}
+
+.container-menu__card {
+    width: 100%;
+    height: 5rem;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    justify-content: center;
+
+    &__content {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 0.5rem;
+    }
+}

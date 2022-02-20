@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: $lightdark;
+    padding: 2rem;
+    gap: 10px;
+
+    &__title {
+        color: $colour-white;
+        font-size: 1.4rem;
+    }
+
+    &__list {
+        color: $colour-white;
+        font-size: 1.1rem;
+        display: flex;
+        gap: 10px;
+
+        &__icon {
+            font-size: 1rem;
+        }
+    }
+}

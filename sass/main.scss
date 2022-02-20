@@ -1,20 +1,19 @@
-// @import "./utils/variables";
-// @import "./utils/functions";
-// @import "./utils/mixins";
-// @import "./utils/extensions";
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/mixins";
 
-// @import "./base/base";
-// @import "./base/typography";
+@import "base/base";
+@import "base/typography";
 
-// @import "./components/buttons";
+@import "components/buttons";
 
-// @import "./layout/header";
-// @import "./layout/nav";
-// @import "./layout/container";
-// @import "./layout/form";
+@import "layout/header";
+@import "layout/footer";
 
-@import "./pages/acceuil.scss";
 
-.testmain {
-    color:red;
-}
+
+@import "pages/index";
+@import "pages/la-note-enchante";
+@import "pages/la-palette-de-gout";
+@import "pages/le-delice-des-sens";
+@import "pages/menu-francaise";

@@ -1,0 +1,71 @@
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@mixin border ($colour:$colour-primary) {
+    border: .1rem solid $colour;
+}
+
+@mixin btn {
+    padding: $button-padding;
+    color: $colour-white;
+    background: $button-bg;
+    background: $button-gradiant;
+    border-radius: $button-rad;
+    border: 0;
+    cursor: pointer;
+    &__txt {
+        font-weight: 700;
+        font-size: 1rem;
+        font-family: 'roboto';
+    }
+    &:active{
+        background-color: adjust-hue($color: $colour-primary, $degrees: 30)
+    }
+}
+
+@mixin font-awesome($font-weight: 400) {
+    display: inline-block;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: $font-weight;
+}
+
+@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
+    @include font-awesome($font-weight);
+    content: "\f004";
+    font-size: 1.5rem;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: $opacity;
+    transition: all 200ms ease-in-out;
+  }
+  
+  @mixin heart-animated {
+    position: relative;
+    &::before {
+      @include heart;
+    }
+    &::after {
+      @include heart($opacity: 0, $font-weight: 900, $color: transparent);
+      background-image: $button-gradiant; 
+    }
+    &:hover::before {
+        opacity: 0;
+    }
+    &:hover::after {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.1);
+    }
+  }

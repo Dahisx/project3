@@ -1,0 +1,10 @@
+.header {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    &__logo {
+        font-size: 2rem;
+        width: 100%;
+    }
+}

@@ -1,0 +1,33 @@
+h1 {
+    font-family: $font-primary, cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    display: flex;
+    font-family: 'roboto';
+    
+}
+
+body {
+    font-family: $font-secondary, sans-serif;
+    @include mobile-only;
+}
+
+.quotetext {
+    font-family: $font-secondary;
+    font-weight: 300;
+}
+
+.sub-title {
+    font-family: $font-primary;
+    font-size: 1.4rem;
+}
+
+
+
+
