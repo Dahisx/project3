@@ -10,5 +10,15 @@ ul {
 }
 
 a {
-    text-decoration: none;  
+    text-decoration: none;
+    color: $colour-white;
+
+    &:visited :hover :focus {
+        text-decoration: none;
+        color: $colour-white; 
+    }
+}
+
+.cursor-link {
+    cursor: pointer;
 }

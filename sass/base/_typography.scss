@@ -23,11 +23,26 @@ body {
     font-weight: 300;
 }
 
+.quotetext-small {
+    font-family: "roboto";
+    font-weight: 300;
+    font-size: 14px;
+}
+
 .sub-title {
     font-family: $font-primary;
     font-size: 1.4rem;
 }
 
+.menu-title-weight {
+    font-weight: 600;
+    display: flex;
+}
 
-
+.menu-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 

@@ -11,6 +11,15 @@ ul {
 
 a {
   text-decoration: none;
+  color: #FFF;
+}
+a:visited :hover :focus {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.cursor-link {
+  cursor: pointer;
 }
 
 h1 {
@@ -42,9 +51,27 @@ body {
   font-weight: 300;
 }
 
+.quotetext-small {
+  font-family: "roboto";
+  font-weight: 300;
+  font-size: 14px;
+}
+
 .sub-title {
   font-family: "Shrikhand";
   font-size: 1.4rem;
+}
+
+.menu-title-weight {
+  font-weight: 600;
+  display: flex;
+}
+
+.menu-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn {
@@ -65,11 +92,72 @@ body {
   background-color: #d656dc;
 }
 
+.btn-like {
+  position: relative;
+}
+.btn-like::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 1.5rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.btn-like::after {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 1.5rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(0deg, #8d00ff 0%, #FF79DA 100%);
+}
+.btn-like:hover::before {
+  opacity: 0;
+}
+.btn-like:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.return-index {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  bottom: -15px;
+  left: 35px;
+  font-size: 20px;
+}
+
 .header {
   width: 100%;
   display: flex;
   text-align: center;
-  flex-wrap: wrap;
+  flex-direction: row-reverse;
 }
 .header__logo {
   font-size: 2rem;
@@ -156,7 +244,7 @@ body {
   position: absolute;
   left: -13px;
   bottom: 13px;
-  background-color: #FF79DA;
+  background-color: #9356DC;
   color: #FFF;
 }
 .container__card:hover {
@@ -276,18 +364,20 @@ body {
   background-color: #f2f2f2;
   align-items: center;
   justify-content: space-around;
-  position: relative;
   flex-direction: column;
-  top: -30px;
   padding: 1rem;
-  border-radius: 35px 35px 0 0;
+  gap: 10px;
 }
 .container-menu__head {
   display: flex;
-  align-items: center;
-  gap: 70px;
-  margin-bottom: 2rem;
   margin-top: 1rem;
+  background-color: #f2f2f2;
+  top: 232px;
+  padding: 2rem 0rem 0rem 2rem;
+  position: absolute;
+  width: 358px;
+  border-radius: 40px 40px 0px 0px;
+  justify-content: space-between;
 }
 .container-menu__logo {
   font-size: 1.3rem;
@@ -316,9 +406,6 @@ body {
   justify-content: center;
 }
 .container-menu__card__content {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
   padding: 0.5rem;
 }
 

@@ -1,3 +1,16 @@
 .btn {
     @include btn
 }
+
+.btn-like {
+    @include heart-animated;
+}
+
+.return-index {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    bottom: -15px;
+    left: 35px;
+    font-size: 20px;
+}
