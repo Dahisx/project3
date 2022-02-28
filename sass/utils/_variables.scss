@@ -6,7 +6,7 @@ $colour-container-dark:#cfcfcf;
 $colour-white:#FFF;
 $darkPrimary:rgb(141,0,255);
 $lightdark: #303030;
-
+$dark: #000000;
 
 
 $h2-pad: 1rem 2rem 3rem 4rem;
@@ -25,6 +25,7 @@ $font-large:2rem;
 
 
 $breakpoints: (
-  mobile: 599px,
-  tablet: 720px,
+  "mobile": 599px,
+  "tablet": 720px,
+  "desktop": 1366px,
 );

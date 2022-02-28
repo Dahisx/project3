@@ -24,16 +24,28 @@
     flex-direction: column;
 	padding: 2rem;
     gap: 20px;
+    @media screen and (min-width: 720px) {
+        display: flex;
+        align-content: center;
+    }
 }
+
 .container__card {
 	display: flex;
 	background-color: $colour-container;
 	border-radius: 20px;
     position: relative;
     gap:1rem;
+    @media screen and (min-width: 768px) {
+        gap: 2rem;
+    }
 	&__text {
 		padding: 20px 0px;
         font-weight: 600;  
+        @media screen and (min-width: 768px) {
+            padding: 20px 20px;
+            width: 250px;
+        }
 	}
 
     &__icon {
@@ -92,6 +104,10 @@
         gap: 100px;
         height: 70px;
         justify-content: space-evenly;
+        @media screen and (min-width: 768px) {
+            justify-content: space-between;
+            margin-left: 1rem;
+        }
     }
 
     &__text {
@@ -115,12 +131,16 @@
         bottom: -30px;
         padding: 0.3rem;
         font-weight: 500;
+        @media screen and (min-width: 768px) {
+            bottom: 185px;
+        }
     }
 }
 
 .index__card__icon {
     @include heart-animated;
 }
+  
 
 
 
