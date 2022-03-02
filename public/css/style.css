@@ -71,12 +71,17 @@ h1 {
   font-size: 2rem;
   font-style: italic;
   margin-top: 0;
-  margin-bottom: 1rem;
 }
 
 h2 {
   display: flex;
   font-family: "roboto";
+}
+@media screen and (min-width: 1366px) {
+  h2 {
+    font-size: 2rem;
+    align-items: center;
+  }
 }
 
 body {
@@ -93,11 +98,21 @@ body {
   font-family: "roboto";
   font-weight: 300;
 }
+@media screen and (min-width: 1366px) {
+  .quotetext {
+    font-size: 1.3rem;
+  }
+}
 
 .quotetext-small {
   font-family: "roboto";
   font-weight: 300;
   font-size: 14px;
+}
+@media screen and (min-width: 720px) {
+  .quotetext-small {
+    font-size: 1.1rem;
+  }
 }
 
 .sub-title {
@@ -109,12 +124,40 @@ body {
   font-weight: 600;
   display: flex;
 }
+@media screen and (min-width: 720px) {
+  .menu-title-weight {
+    font-size: 1.3rem;
+  }
+}
 
 .menu-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.title-center {
+  display: flex;
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 1366px) {
+  .title-center {
+    justify-content: center;
+    padding: 3rem;
+  }
+}
+
+.bg-fill {
+  background-color: #f2f2f2;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 1366px) {
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 
 .btn {
@@ -196,6 +239,11 @@ body {
   left: 35px;
   font-size: 20px;
 }
+@media screen and (min-width: 1366px) {
+  .return-index {
+    font-size: 3rem;
+  }
+}
 
 .header {
   width: 100%;
@@ -207,6 +255,11 @@ body {
   font-size: 2rem;
   width: 100%;
 }
+@media screen and (min-width: 1366px) {
+  .header__logo {
+    font-size: 5rem;
+  }
+}
 
 .footer {
   display: flex;
@@ -217,15 +270,45 @@ body {
   padding: 2rem;
   gap: 10px;
 }
+@media screen and (min-width: 1366px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .footer__title {
   color: #FFF;
   font-size: 1.4rem;
+  background-color: #303030;
+  border: solid #303030;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  position: relative;
+  top: 5px;
+}
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .footer__title {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+  }
 }
 .footer__list {
   color: #FFF;
   font-size: 1.1rem;
   display: flex;
   gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .footer__list {
+    font-size: 1.3rem;
+  }
 }
 .footer__list__icon {
   font-size: 1rem;
@@ -270,12 +353,22 @@ body {
 .container-menu__card:nth-child(10) {
   animation-delay: 1000ms;
 }
+@media screen and (min-width: 1366px) {
+  .container-menu__card {
+    width: 30%;
+  }
+}
 .container-menu__card__price {
   margin-left: auto;
   font-weight: 900;
   padding: 1rem;
   display: flex;
   align-items: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .container-menu__card__price {
+    font-size: 1.1rem;
+  }
 }
 .container-menu__card__description {
   padding: 1rem;
@@ -333,6 +426,14 @@ body {
   .button-responsive {
     width: 30%;
     margin-left: 15rem;
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .button-responsive {
+    width: 10%;
+    margin-left: 3rem;
+    margin-top: 1rem;
   }
 }
 
@@ -355,6 +456,13 @@ body {
   padding: 3rem;
   background-color: #f2f2f2;
 }
+@media screen and (min-width: 1336px) {
+  .exploration {
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .container {
   display: flex;
@@ -367,6 +475,15 @@ body {
   .container {
     display: flex;
     align-content: center;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6rem;
+    padding: 3rem;
   }
 }
 
@@ -425,6 +542,12 @@ body {
   background-color: #f2f2f2;
   gap: 20px;
 }
+@media screen and (min-width: 768px) {
+  .index {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+}
 
 .index__card {
   display: flex;
@@ -433,11 +556,21 @@ body {
   border-radius: 25px;
   height: 300px;
 }
+@media screen and (min-width: 1366px) {
+  .index__card {
+    height: 385px;
+  }
+}
 .index__card__gallery {
   width: 100%;
   height: 220px;
   object-fit: cover;
   border-radius: 25px 25px 0px 0px;
+}
+@media screen and (min-width: 1366px) {
+  .index__card__gallery {
+    height: 310px;
+  }
 }
 .index__card__layout {
   display: flex;
@@ -465,15 +598,23 @@ body {
 .index__card__new {
   background-color: #99E2D0;
   color: #1b6150;
-  position: absolute;
-  right: 55px;
-  bottom: -30px;
+  position: relative;
   padding: 0.3rem;
   font-weight: 500;
+  width: fit-content;
+  bottom: 15rem;
+  left: 14rem;
 }
 @media screen and (min-width: 768px) {
   .index__card__new {
-    bottom: 185px;
+    bottom: 15rem;
+    left: 15rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .index__card__new {
+    bottom: 20rem;
+    left: 70rem;
   }
 }
 
@@ -535,6 +676,11 @@ body {
   object-fit: cover;
   background-image: url(/public/img/la-note-enchantee.jpg);
 }
+@media screen and (min-width: 1366px) {
+  .menu-main {
+    height: 65vh;
+  }
+}
 
 .container-menu {
   display: grid;
@@ -549,11 +695,17 @@ body {
     display: block;
   }
 }
+@media screen and (min-width: 1366px) {
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .container-menu__head {
   display: flex;
   margin-top: 1rem;
   background-color: #f2f2f2;
-  top: 232px;
+  top: 215px;
   padding: 2rem 0rem 0rem 2rem;
   position: absolute;
   width: 358px;
@@ -564,6 +716,12 @@ body {
   .container-menu__head {
     justify-content: space-around;
     padding: 1rem 0rem 0rem 1rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container-menu__head {
+    top: 43rem;
+    left: 69rem;
   }
 }
 .container-menu__logo {
@@ -577,6 +735,17 @@ body {
   align-items: flex-start;
   margin: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .container-menu__title-secondary {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container-menu__title-secondary {
+    justify-content: center;
+    flex-direction: row;
+  }
+}
 .container-menu__title-secondary__underline {
   border-bottom: 3px solid #99E2D0;
   width: 10%;
@@ -585,6 +754,11 @@ body {
 @media screen and (min-width: 768px) {
   .container-menu__title-secondary__underline {
     width: 5%;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container-menu__title-secondary__underline {
+    width: 1.5%;
   }
 }
 

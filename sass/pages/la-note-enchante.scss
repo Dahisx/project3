@@ -3,6 +3,9 @@
     height: 220px;
     object-fit: cover;
     background-image: url(/public/img/la-note-enchantee.jpg);
+    @media screen and (min-width: 1366px) {
+        height: 65vh;
+    }
 }
 
 .container-menu {
@@ -15,12 +18,16 @@
     @media screen and (min-width: 768px) {
         display: block;
     }
+    @media screen and (min-width: 1366px) {
+        display: flex;
+        flex-direction: column;
+      }
 
     &__head {
         display: flex;
         margin-top: 1rem;
         background-color: #f2f2f2;
-        top: 232px;
+        top: 215px;
         padding: 2rem 0rem 0rem 2rem;
         position: absolute;
         width: 358px;
@@ -29,6 +36,10 @@
         @media screen and (min-width: 768px) {
             justify-content: space-around;
             padding: 1rem 0rem 0rem 1rem;
+        }
+        @media screen and (min-width: 1366px) {
+            top: 43rem;
+            left: 69rem;
         }
     }
 
@@ -44,13 +55,22 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 1rem;
-
+    @media screen and (min-width: 768px) {
+        font-size: 1.1rem;
+    }
+    @media screen and (min-width: 1366px) {
+        justify-content: center;
+        flex-direction: row;
+    }
     &__underline {
         border-bottom: 3px solid $colour-tertiary;
         width: 10%;
         height: 25px;
         @media screen and (min-width: 768px) {
             width: 5%;
+        }
+        @media screen and (min-width: 1366px) {
+            width: 1.5%;
         }
     }
 }

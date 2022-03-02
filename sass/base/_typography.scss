@@ -4,12 +4,15 @@ h1 {
     font-size: 2rem;
     font-style: italic;
     margin-top: 0;
-    margin-bottom: 1rem;
 }
 
 h2 {
     display: flex;
     font-family: 'roboto';
+    @media screen and (min-width: 1366px) {
+        font-size: 2rem;
+        align-items: center;
+    }
     
 }
 
@@ -21,12 +24,18 @@ body {
 .quotetext {
     font-family: $font-secondary;
     font-weight: 300;
+    @media screen and (min-width: 1366px) {
+        font-size: 1.3rem;
+    }
 }
 
 .quotetext-small {
     font-family: "roboto";
     font-weight: 300;
     font-size: 14px;
+    @media screen and (min-width: 720px) {
+        font-size: 1.1rem;
+    }
 }
 
 .sub-title {
@@ -37,6 +46,9 @@ body {
 .menu-title-weight {
     font-weight: 600;
     display: flex;
+    @media screen and (min-width: 720px) {
+        font-size: 1.3rem;
+    }
 }
 
 .menu-info {
@@ -46,3 +58,23 @@ body {
     align-items: center;
 }
 
+.title-center {
+    display: flex;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    @media screen and (min-width: 1366px) {
+        justify-content: center;
+        padding: 3rem;
+    }
+}
+
+.bg-fill {
+    background-color: $colour-container;
+    padding-top: $secondary-padding;
+}
+
+h3 {
+    @media screen and (min-width: 1366px) {
+        font-size: 1.5rem;
+    }
+}
