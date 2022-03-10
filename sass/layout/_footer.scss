@@ -7,27 +7,21 @@
     padding: $regular-padding;
     gap: 10px;
     @media screen and (min-width: 1366px) {
-        flex-direction: row;
         justify-content: space-around;
     }
 
     &__title {
         color: $colour-white;
-        font-size: 1.4rem;
+        font-size: $font-medium;
         background-color: $lightdark;
-        border: solid $lightdark;
-        padding-left: $regular-padding;
-        padding-top: $secondary-padding;
-        display: flex;
-        position: relative;
         top: 5px;
         @media screen and (min-width: 768px) {
             font-size: 1.6rem;
         }
         @media screen and (min-width: 1366px) {
             display: flex;
-            justify-content: center;
             font-size: 3rem;
+            position: none;
         }
     }
 

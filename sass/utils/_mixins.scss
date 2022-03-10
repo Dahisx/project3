@@ -23,6 +23,9 @@
     font-weight: 700;
     font-size: 1rem;
     font-family: "roboto";
+    @media screen and (min-width: 1366px) {
+      font-size: $font-medium;
+    }
   }
   &:active {
     background-color: adjust-hue($color: $colour-primary, $degrees: 30);
@@ -52,6 +55,9 @@
   -webkit-background-clip: text;
   opacity: $opacity;
   transition: all 400ms ease-in-out;
+  @media screen and (min-width: 1366px) {
+    font-size: 2.5rem;
+  }
 }
 
 @mixin heart-animated {

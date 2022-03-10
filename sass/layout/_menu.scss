@@ -6,7 +6,7 @@
         }
     }
     animation: appear 1s;
-    animation-fill-mode: both;
+    
     display: flex;
     background-color: white;
     border-radius: 1rem;
@@ -24,6 +24,9 @@
         @media screen and (min-width: 768px) {
           font-size: 1.1rem;
         }
+        @media screen and (min-width: 768px) {
+          font-size: $font-medium;
+        }
       }
 
       &__description {
@@ -36,6 +39,9 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+          @media screen and (min-width: 1366px) {
+            font-size: $font-medium;
+          }
         }
       }
 

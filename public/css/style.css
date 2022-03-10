@@ -8,6 +8,16 @@
     opacity: 1;
   }
 }
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 *,
 *::after,
 *::before {
@@ -42,7 +52,7 @@ a:visited :hover :focus {
   z-index: 1;
   opacity: 0.9;
   animation: disappear 200ms 3s forwards;
-  transform-origin: top;
+  transform-origin: center;
 }
 .loader::after {
   content: "";
@@ -55,16 +65,10 @@ a:visited :hover :focus {
   animation-iteration-count: 3;
 }
 
-@keyframes disappear {
-  to {
-    transform: scale(0);
-  }
+.background-image {
+  background: #f2f2f2;
 }
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 h1 {
   font-family: "Shrikhand", cursive;
   font-weight: bold;
@@ -119,6 +123,11 @@ body {
   font-family: "Shrikhand";
   font-size: 1.4rem;
 }
+@media screen and (min-width: 1366px) {
+  .sub-title {
+    font-size: 2rem;
+  }
+}
 
 .menu-title-weight {
   font-weight: 600;
@@ -156,7 +165,7 @@ body {
 
 @media screen and (min-width: 1366px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -174,6 +183,11 @@ body {
   font-weight: 700;
   font-size: 1rem;
   font-family: "roboto";
+}
+@media screen and (min-width: 1366px) {
+  .btn__txt {
+    font-size: 1.4rem;
+  }
 }
 .btn:active {
   background-color: #d656dc;
@@ -202,6 +216,11 @@ body {
   opacity: 1;
   transition: all 400ms ease-in-out;
 }
+@media screen and (min-width: 1366px) {
+  .btn-like::before {
+    font-size: 2.5rem;
+  }
+}
 .btn-like::after {
   display: inline-block;
   position: absolute;
@@ -222,6 +241,11 @@ body {
   opacity: 0;
   transition: all 400ms ease-in-out;
   background-image: linear-gradient(0deg, #8d00ff 0%, #FF79DA 100%);
+}
+@media screen and (min-width: 1366px) {
+  .btn-like::after {
+    font-size: 2.5rem;
+  }
 }
 .btn-like:hover::before {
   opacity: 0;
@@ -272,7 +296,6 @@ body {
 }
 @media screen and (min-width: 1366px) {
   .footer {
-    flex-direction: row;
     justify-content: space-around;
   }
 }
@@ -280,11 +303,6 @@ body {
   color: #FFF;
   font-size: 1.4rem;
   background-color: #303030;
-  border: solid #303030;
-  padding-left: 2rem;
-  padding-top: 1rem;
-  display: flex;
-  position: relative;
   top: 5px;
 }
 @media screen and (min-width: 768px) {
@@ -295,8 +313,8 @@ body {
 @media screen and (min-width: 1366px) {
   .footer__title {
     display: flex;
-    justify-content: center;
     font-size: 3rem;
+    position: none;
   }
 }
 .footer__list {
@@ -316,7 +334,6 @@ body {
 
 .container-menu__card {
   animation: appear 1s;
-  animation-fill-mode: both;
   display: flex;
   background-color: white;
   border-radius: 1rem;
@@ -370,6 +387,11 @@ body {
     font-size: 1.1rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .container-menu__card__price {
+    font-size: 1.4rem;
+  }
+}
 .container-menu__card__description {
   padding: 1rem;
   overflow: hidden;
@@ -381,6 +403,11 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+@media screen and (min-width: 1366px) {
+  .container-menu__card__description div {
+    font-size: 1.4rem;
+  }
 }
 .container-menu__card .menu-item__check {
   display: grid;
@@ -444,6 +471,11 @@ body {
   background-color: #cfcfcf;
   padding: 1rem;
   text-align: center;
+}
+@media screen and (min-width: 1336px) {
+  .localisation {
+    font-size: 1.4rem;
+  }
 }
 
 .exploration {
@@ -509,11 +541,21 @@ body {
     width: 250px;
   }
 }
+@media screen and (min-width: 1366px) {
+  .container__card__text {
+    font-size: 1.4rem;
+  }
+}
 .container__card__icon {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   margin-left: 2rem;
+}
+@media screen and (min-width: 1366px) {
+  .container__card__icon {
+    font-size: 1.4rem;
+  }
 }
 .container__card__number {
   display: flex;
@@ -529,6 +571,14 @@ body {
   bottom: 13px;
   background-color: #9356DC;
   color: #FFF;
+}
+@media screen and (min-width: 1366px) {
+  .container__card__number {
+    width: 3rem;
+    height: 3rem;
+    left: -26px;
+    bottom: 11px;
+  }
 }
 .container__card:hover {
   background-color: #d7c0f2;
@@ -548,6 +598,11 @@ body {
     grid-template-columns: 2fr 2fr;
   }
 }
+@media screen and (min-width: 1366px) {
+  .index {
+    display: flex;
+  }
+}
 
 .index__card {
   display: flex;
@@ -558,7 +613,7 @@ body {
 }
 @media screen and (min-width: 1366px) {
   .index__card {
-    height: 385px;
+    height: 520px;
   }
 }
 .index__card__gallery {
@@ -569,7 +624,7 @@ body {
 }
 @media screen and (min-width: 1366px) {
   .index__card__gallery {
-    height: 310px;
+    height: 410px;
   }
 }
 .index__card__layout {
@@ -590,6 +645,11 @@ body {
   align-self: center;
   gap: 5px;
   align-items: flex-start;
+}
+@media screen and (min-width: 1366px) {
+  .index__card__text {
+    font-size: 1.4rem;
+  }
 }
 .index__card__icon {
   font-size: 25px;
@@ -613,8 +673,8 @@ body {
 }
 @media screen and (min-width: 1366px) {
   .index__card__new {
-    bottom: 20rem;
-    left: 70rem;
+    bottom: 27rem;
+    left: 105rem;
   }
 }
 
@@ -641,6 +701,11 @@ body {
   opacity: 1;
   transition: all 400ms ease-in-out;
 }
+@media screen and (min-width: 1366px) {
+  .index__card__icon::before {
+    font-size: 2.5rem;
+  }
+}
 .index__card__icon::after {
   display: inline-block;
   position: absolute;
@@ -661,6 +726,11 @@ body {
   opacity: 0;
   transition: all 400ms ease-in-out;
   background-image: linear-gradient(0deg, #8d00ff 0%, #FF79DA 100%);
+}
+@media screen and (min-width: 1366px) {
+  .index__card__icon::after {
+    font-size: 2.5rem;
+  }
 }
 .index__card__icon:hover::before {
   opacity: 0;
@@ -720,8 +790,10 @@ body {
 }
 @media screen and (min-width: 1366px) {
   .container-menu__head {
-    top: 43rem;
-    left: 69rem;
+    top: 33rem;
+    left: 43.5rem;
+    width: 500px;
+    position: absolute;
   }
 }
 .container-menu__logo {
@@ -744,6 +816,7 @@ body {
   .container-menu__title-secondary {
     justify-content: center;
     flex-direction: row;
+    font-size: 1.4rem;
   }
 }
 .container-menu__title-secondary__underline {
@@ -758,70 +831,7 @@ body {
 }
 @media screen and (min-width: 1366px) {
   .container-menu__title-secondary__underline {
-    width: 1.5%;
-  }
-}
-
-.loading-aera {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1000;
-  background: #000000;
-}
-.loading-aera__loader {
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -100px 0 0 -100px;
-  font-size: 30px;
-  color: #FFF;
-  perspective: 200px;
-}
-
-.loading-anime1 .loading-anime2 {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 5px solid;
-  border-left-color: #99E2D0;
-  border-right-color: #99E2D0;
-  border-top-color: #99E2D0;
-  border-bottom-color: #99E2D0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -100px 0 0 -100px;
-  animation: loadanim 3000ms;
-  animation-iteration-count: infinite;
-}
-
-.loading-anime2 {
-  animation: loadanim2 3000ms;
-  animation-iteration-count: infinite;
-}
-
-@keyframes loadanim {
-  0% {
-    transform: rotate3d(1, 1, 1, 0deg);
-  }
-  100% {
-    transform: rotate3d(1, 1, 1, 360deg);
-  }
-}
-@keyframes loadanim2 {
-  0% {
-    transform: rotate3d(1, 1, 1, 0deg);
-  }
-  100% {
-    transform: rotate3d(1, 1, 1, 360deg);
+    width: 3.5%;
   }
 }
 

@@ -29,6 +29,10 @@ body {
     }
 }
 
+.indexquote {
+    
+}
+
 .quotetext-small {
     font-family: "roboto";
     font-weight: 300;
@@ -40,7 +44,10 @@ body {
 
 .sub-title {
     font-family: $font-primary;
-    font-size: 1.4rem;
+    font-size: $font-medium;
+    @media screen and (min-width: 1366px) {
+        font-size: $font-large;
+    }
 }
 
 .menu-title-weight {
@@ -75,6 +82,6 @@ body {
 
 h3 {
     @media screen and (min-width: 1366px) {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
     }
 }
