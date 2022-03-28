@@ -67,6 +67,7 @@ a:visited :hover :focus {
 
 .background-image {
   background: #f2f2f2;
+  position: relative;
 }
 
 h1 {
@@ -192,6 +193,9 @@ body {
 .btn:active {
   background-color: #d656dc;
 }
+.btn:hover {
+  opacity: 0.9;
+}
 
 .btn-like {
   position: relative;
@@ -314,7 +318,7 @@ body {
   .footer__title {
     display: flex;
     font-size: 3rem;
-    position: none;
+    position: unset;
   }
 }
 .footer__list {
@@ -330,6 +334,90 @@ body {
 }
 .footer__list__icon {
   font-size: 1rem;
+}
+
+.menu-main {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-image: url(/public/img/la-note-enchantee.jpg);
+}
+@media screen and (min-width: 1366px) {
+  .menu-main {
+    height: 65vh;
+  }
+}
+
+.container-menu {
+  display: grid;
+  background-color: #f2f2f2;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .container-menu {
+    display: block;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container-menu__head {
+  display: flex;
+  margin-top: 1rem;
+  background-color: #f2f2f2;
+  width: 92%;
+  padding: 2rem 0rem 0rem 2rem;
+  position: absolute;
+  border-radius: 40px 40px 0px 0px;
+  justify-content: space-between;
+  bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .container-menu__head {
+    justify-content: space-around;
+    padding: 1rem 0rem 0rem 1rem;
+    width: 358px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container-menu__head {
+    width: 500px;
+    right: 36%;
+  }
+}
+.container-menu__logo {
+  font-size: 1.3rem;
+}
+
+.container-menu__title-secondary {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .container-menu__title-secondary {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container-menu__title-secondary {
+    justify-content: center;
+    flex-direction: row;
+    font-size: 1.4rem;
+  }
+}
+.container-menu__title-secondary__underline {
+  border-bottom: 3px solid #99E2D0;
+  width: 50%;
+  height: 25px;
 }
 
 .container-menu__card {
@@ -449,6 +537,21 @@ body {
   padding: 0.5rem;
 }
 
+.wdt-76 {
+  width: 76px;
+}
+@media screen and (min-width: 1366px) {
+  .wdt-76 {
+    width: 96px;
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .button-responsive {
+    margin-left: 7rem;
+    width: 30%;
+  }
+}
 @media screen and (min-width: 768px) {
   .button-responsive {
     width: 30%;
@@ -738,101 +841,6 @@ body {
 .index__card__icon:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
-}
-
-.menu-main {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  background-image: url(/public/img/la-note-enchantee.jpg);
-}
-@media screen and (min-width: 1366px) {
-  .menu-main {
-    height: 65vh;
-  }
-}
-
-.container-menu {
-  display: grid;
-  background-color: #f2f2f2;
-  align-items: center;
-  justify-content: space-around;
-  padding: 1rem;
-  gap: 10px;
-}
-@media screen and (min-width: 768px) {
-  .container-menu {
-    display: block;
-  }
-}
-@media screen and (min-width: 1366px) {
-  .container-menu {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.container-menu__head {
-  display: flex;
-  margin-top: 1rem;
-  background-color: #f2f2f2;
-  top: 215px;
-  padding: 2rem 0rem 0rem 2rem;
-  position: absolute;
-  width: 358px;
-  border-radius: 40px 40px 0px 0px;
-  justify-content: space-between;
-}
-@media screen and (min-width: 768px) {
-  .container-menu__head {
-    justify-content: space-around;
-    padding: 1rem 0rem 0rem 1rem;
-  }
-}
-@media screen and (min-width: 1366px) {
-  .container-menu__head {
-    top: 33rem;
-    left: 43.5rem;
-    width: 500px;
-    position: absolute;
-  }
-}
-.container-menu__logo {
-  font-size: 1.3rem;
-}
-
-.container-menu__title-secondary {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .container-menu__title-secondary {
-    font-size: 1.1rem;
-  }
-}
-@media screen and (min-width: 1366px) {
-  .container-menu__title-secondary {
-    justify-content: center;
-    flex-direction: row;
-    font-size: 1.4rem;
-  }
-}
-.container-menu__title-secondary__underline {
-  border-bottom: 3px solid #99E2D0;
-  width: 10%;
-  height: 25px;
-}
-@media screen and (min-width: 768px) {
-  .container-menu__title-secondary__underline {
-    width: 5%;
-  }
-}
-@media screen and (min-width: 1366px) {
-  .container-menu__title-secondary__underline {
-    width: 3.5%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

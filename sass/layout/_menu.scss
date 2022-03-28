@@ -1,3 +1,79 @@
+.menu-main {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-image: url(/public/img/la-note-enchantee.jpg);
+  @media screen and (min-width: 1366px) {
+      height: 65vh;
+  }
+}
+
+.container-menu {
+  display: grid;
+  background-color: $colour-container;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 10px;
+  @media screen and (min-width: 768px) {
+      display: block;
+  }
+  @media screen and (min-width: 1366px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+  &__head {
+      display: flex;
+      margin-top: 1rem;
+      background-color: #f2f2f2;
+      width: 92%;
+      padding: 2rem 0rem 0rem 2rem;
+      position: absolute;
+      border-radius: 40px 40px 0px 0px;
+      justify-content: space-between;
+      bottom: 0;
+      @media screen and (min-width: 768px) {
+          justify-content: space-around;
+          padding: 1rem 0rem 0rem 1rem;
+          width: 358px;
+      }
+      @media screen and (min-width: 1366px) {
+          width: 500px;
+          right: 36%;
+          
+      }
+  }
+
+  &__logo {
+      font-size: 1.3rem;
+  }
+}
+
+
+.container-menu__title-secondary {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1rem;
+  @media screen and (min-width: 768px) {
+      font-size: 1.1rem;
+  }
+  @media screen and (min-width: 1366px) {
+      justify-content: center;
+      flex-direction: row;
+      font-size: $font-medium;
+  }
+  &__underline {
+      border-bottom: 3px solid $colour-tertiary;
+      width: 50%;
+      height: 25px;
+  }
+}
+
+
+
 .container-menu__card {
     $numberOfItems: 10;
     @for $i from 1 through $numberOfItems {
@@ -82,7 +158,18 @@
     }
 }
 
+.wdt-76 {
+  width: 76px;
+  @media screen and (min-width: 1366px) {
+    width: 96px;
+  }
+}
+
 .button-responsive {
+  @media screen and (min-width: 390px) {
+    margin-left: 7rem;
+    width: 30%;
+  }
   @media screen and (min-width: 768px) {
     width: 30%;
     margin-left: 15rem;

@@ -30,6 +30,9 @@
   &:active {
     background-color: adjust-hue($color: $colour-primary, $degrees: 30);
   }
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 @mixin font-awesome($font-weight: 400) {

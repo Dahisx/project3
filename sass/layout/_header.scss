@@ -4,7 +4,7 @@
     text-align: center;
     flex-direction: row-reverse;
     &__logo {
-        font-size: 2rem;
+        font-size: $font-large;
         width: 100%;
         @media screen and (min-width: 1366px) {
             font-size: 5rem;
