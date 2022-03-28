@@ -713,6 +713,7 @@ body {
   background-color: #FFF;
   border-radius: 25px;
   height: 300px;
+  position: relative;
 }
 @media screen and (min-width: 1366px) {
   .index__card {
@@ -761,24 +762,12 @@ body {
 .index__card__new {
   background-color: #99E2D0;
   color: #1b6150;
-  position: relative;
+  position: absolute;
   padding: 0.3rem;
   font-weight: 500;
   width: fit-content;
-  bottom: 15rem;
-  left: 14rem;
-}
-@media screen and (min-width: 768px) {
-  .index__card__new {
-    bottom: 15rem;
-    left: 15rem;
-  }
-}
-@media screen and (min-width: 1366px) {
-  .index__card__new {
-    bottom: 27rem;
-    left: 105rem;
-  }
+  top: 10%;
+  right: 10%;
 }
 
 .index__card__icon {
